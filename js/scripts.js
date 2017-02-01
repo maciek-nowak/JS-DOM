@@ -1,10 +1,15 @@
 // plik scripts.js 
 
-var buttons = document.getElementsByClassName('button'),
-	verse = '';
+var buttonElement = document.getElementById('addElem'),
+	list = document.getElementById('Lista');
+	itemNumber = 1;
 
-for (var i = 0; i < buttons.length; i++) {
-	console.log(buttons[i].innerText);
-	verse = verse + ' ' + buttons[i].innerText;
-}
-console.log(verse.slice(1));
+function checkOnclickEvent(param) { 
+	list.innerHTML += '<li>item ' + param +'</li>';
+} 
+
+buttonElement.addEventListener('click', function(e) { 
+	checkOnclickEvent(itemNumber);
+	itemNumber++; 
+}); 
+
