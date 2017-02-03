@@ -1,7 +1,7 @@
 // plik scripts.js 
 
 var buttonElement = document.getElementById('addElem'),
-	list = document.getElementById('Lista');
+	list = document.getElementById('Lista'),
 	itemNumber = 1;
 
 function checkOnclickEvent(param) { 
@@ -12,4 +12,3 @@ buttonElement.addEventListener('click', function(e) {
 	checkOnclickEvent(itemNumber);
 	itemNumber++; 
 }); 
-
